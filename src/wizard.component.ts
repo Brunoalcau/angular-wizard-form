@@ -1,5 +1,6 @@
-import { Component, Output, EventEmitter, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+import { Component, Output, EventEmitter, ContentChildren, QueryList, AfterContentInit, Input } from '@angular/core';
 import { WizardStepComponent } from './wizard-step.component';
+import { lchmod } from 'fs';
 
 @Component({
   selector: 'form-wizard',
@@ -22,20 +23,20 @@ import { WizardStepComponent } from './wizard-step.component';
           type="button"
           class="btn btn-secondary float-left"
           (click)="previous()"
-          [hidden]="!hasPrevStep || !activeStep.showPrev">Previous</button>
+          [hidden]="!hasPrevStep || !activeStep.showPrev">{{txtBtnPrevious}}</button>
         <button
           type="button"
           class="btn btn-secondary float-right"
           (click)="next()"
           [disabled]="!activeStep.isValid"
-          [hidden]="!hasNextStep || !activeStep.showNext">Next</button>
+          [hidden]="!hasNextStep || !activeStep.showNext">{{txtBtnNext}}</button>
 
         <button
           type="button"
           class="btn btn-secondary float-right"
           (click)="complete()"
           [disabled]="!activeStep.isValid"
-          [hidden]="hasNextStep">Done</button>
+          [hidden]="hasNextStep">{{txtBtnDone}}</button>
     </div>
   </div>`
   ,
@@ -54,6 +55,14 @@ import { WizardStepComponent } from './wizard-step.component';
 export class WizardComponent implements AfterContentInit {
   @ContentChildren(WizardStepComponent)
   wizardSteps: QueryList<WizardStepComponent>;
+  @Input()
+  txtBtnPrevious = 'Previous';
+
+  @Input()
+  txtBtnNext = 'Next';
+
+  @Input()
+  txtBtnDone = 'Done';
 
   private _steps: Array<WizardStepComponent> = [];
   private _isCompleted = false;
