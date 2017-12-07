@@ -1,5 +1,5 @@
 {
-  "name": "angular-wizard",
+  "name": "angular-wizard-form",
   "version": "0.3.0",
   "scripts": {
     "build": "ngc -p tsconfig.json",

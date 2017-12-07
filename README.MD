@@ -19,10 +19,10 @@ https://maiyaporn.github.io/angular2-wizard-demo/
 
 ## Installation
 
-After installing the above dependencies, install angular2-wizard via:
+After installing the above dependencies, install angular-wizard-form via:
 
 ```bash
-$ npm install angular2-wizard --save
+$ npm install angular-wizard-form --save
 ```
 
 ## How to use the component
