@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maiyaporn/angular2-wizard"
+    "url": "https://github.com/brunoalcau/angular-wizard-form"
   },
   "author": {
     "name": "Maiyaporn Phanich",
@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brunoalcau/angular2-wizard/issues"
+    "url": "https://github.com/brunoalcau/angular-wizard-form/issues"
   },
   "main": "./dist/index.js",
   "dependencies": {
